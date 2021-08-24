@@ -1,0 +1,8 @@
+node_modules
+dist/
+out/
+build/
+.vscode/
+
+*.js
+package-lock.json
