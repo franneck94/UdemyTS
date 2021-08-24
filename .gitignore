@@ -5,4 +5,5 @@ build/
 .vscode/
 
 *.js
+*.js.map
 package-lock.json
