@@ -2,7 +2,7 @@
 
 ## Arrays
 
-To specify the type of an array like [1, 2, 3], you can use the syntax number[] this syntax works for any type (e.g. string[] is an array of strings, and so on).
+To specify the type of an array like [1, 2, 3], you can use the syntax number[] this syntax works for any type. The number of elements is not fixed!
 
 ## Tuple
 

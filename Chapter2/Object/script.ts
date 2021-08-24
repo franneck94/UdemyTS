@@ -1,11 +1,13 @@
 const person1 = {
     name: 'Jan',
     age: 27,
+    courses: ['c', 'c++', 'python', 'typescript'],
 };
 
 const person2 = {
-    name: 'Jan',
-    age: 27,
+    name: 'Daniel',
+    age: 24,
+    courses: ['python', 'typescript'],
 };
 
 console.log(person1);
