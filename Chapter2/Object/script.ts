@@ -23,3 +23,17 @@ console.log(persons[1]);
 for (const person of persons) {
     console.log(person.name);
 }
+
+function printPerson(person: {
+    name: string;
+    age: number;
+    courses?: string[];
+}) {
+    console.log(person.name);
+    console.log(person.age);
+    if (person.courses) {
+        console.log(person.courses);
+    }
+}
+
+printPerson(person1);
