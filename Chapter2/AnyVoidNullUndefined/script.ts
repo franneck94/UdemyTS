@@ -1,18 +1,15 @@
-function foo(arg: any): void {
+function foo(arg: any) {
     console.log(arg);
-    return true;
+
+    return;
 }
 
-function bar(arg: unknown): void {
-    console.log(arg);
-    return true;
+let a: number | undefined = undefined;
+
+if (!a) {
+    console.log('!a');
+} else {
+    console.log('a');
 }
 
-function fizz(arg: undefined): void {
-    console.log(arg);
-    return true;
-}
-
-console.log(foo());
-console.log(bar());
-console.log(fizz());
+a = 2;

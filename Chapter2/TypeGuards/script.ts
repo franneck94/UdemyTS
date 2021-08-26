@@ -1,13 +1,13 @@
-function printAll(strs: string | string[]) {
-    if (typeof strs === 'object') {
-        for (const s of strs) {
+function printAll(arg: string | string[]) {
+    if (typeof arg === 'object') {
+        for (const s of arg) {
             console.log(s);
         }
         return;
     }
 
-    if (typeof strs === 'string') {
-        console.log(strs);
+    if (typeof arg === 'string') {
+        console.log(arg);
         return;
     }
 }
@@ -15,16 +15,21 @@ function printAll(strs: string | string[]) {
 const s = 'Jan';
 printAll(s);
 
-const a = ['Jan', 'Schaffranek'];
+const a = ['Jan', 'Daniel'];
 printAll(a);
 
-function printNumUsers(numUsers: number) {
-    if (numUsers) {
-        return `There are ${numUsers}`;
-    }
+const n = 1;
 
-    return 'No users';
+if (!n) {
+    console.log('False');
+} else {
+    console.log('True');
 }
 
-printNumUsers(0);
-printNumUsers(1);
+const s2 = '';
+
+if (!s2) {
+    console.log('False');
+} else {
+    console.log('True');
+}

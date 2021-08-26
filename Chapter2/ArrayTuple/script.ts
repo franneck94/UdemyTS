@@ -1,24 +1,16 @@
-let list = [1, 2, 3];
-console.log(list);
+let arr = [1, 2, 3];
+console.log(arr);
 
-function foo(args: number[]): void {
-    console.log(args);
+function printArray(arr: number[]) {
+    console.log(arr);
 }
 
-foo(list);
-foo(27);
+printArray(arr);
+// printArray(27);
 
-type UserTuple = [string, number];
-
-const x: UserTuple = ['hello', 10]; // OK
-console.log(x);
-
-const y: UserTuple = [10, 'hello']; // Error
-console.log(y);
-
-function bar(args: [string, number]): void {
-    console.log(args);
+function printTuple(tpl: [number, number, string]) {
+    console.log(tpl);
 }
 
-bar(['Jan', 27]);
-bar(['Jan', '27']);
+let tpl: [number, number, string] = [27, 34, 'Jan'];
+printTuple(tpl);
