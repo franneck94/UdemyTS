@@ -2,7 +2,7 @@
 
 ## Any
 
-TypeScript also has a special type, any, that you can use whenever you don’t want a particular value to cause typechecking errors.
+TypeScript also has a special type, any, that you can use whenever you dont want a particular value to cause typechecking errors.
 
 ## Void
 

@@ -6,4 +6,4 @@ Function using any as an input type have unfortunately also any as the return. I
 
 In TypeScript, generics are used when we want to describe a correspondence between two values.
 
-Note: Having too many type parameters or using constraints where they aren’t needed can make inference less successful.
+Note: Having too many type parameters or using constraints where they arent needed can make inference less successful.
