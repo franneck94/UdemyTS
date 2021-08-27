@@ -1,4 +1,8 @@
-function lengthComparison<Type extends { length: number }>(a: Type, b: Type) {
+interface Sized {
+    length: number;
+}
+
+function lengthComparison<Type extends Sized>(a: Type, b: Type) {
     if (a.length >= b.length) {
         return a;
     } else {

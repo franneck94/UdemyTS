@@ -1,6 +1,6 @@
 # Generic Functions
 
-Its common to write a function where the types of the input relate to the type of the output, or where the types of two inputs are related in some way.
+Its common to write a function where the types of the input relate to the type of the output.
 
 Function using any as an input type have unfortunately also any as the return. It would be better if the function returned the type of the array element.
 
