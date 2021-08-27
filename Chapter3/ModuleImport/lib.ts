@@ -1,4 +1,4 @@
-class Point2D {
+export class Point2D {
     protected _xPos: number;
     protected _yPos: number;
 
@@ -24,7 +24,7 @@ class Point2D {
     }
 }
 
-class Point3D extends Point2D {
+export class Point3D extends Point2D {
     protected _zPos: number;
 
     constructor(xPosInput: number, yPosInput: number, zPosInput: number) {
@@ -40,13 +40,3 @@ class Point3D extends Point2D {
         this._zPos = zPosNew;
     }
 }
-
-const p1 = new Point2D(0, 0);
-console.log(p1);
-
-p1.xPos = 2;
-
-const p2 = new Point3D(0, 0, 0);
-console.log(p2);
-
-p2.zPos = 3;

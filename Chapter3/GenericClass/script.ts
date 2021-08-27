@@ -1,20 +1,21 @@
-class Data<Type> {
-    contents: Type;
+interface Sized {
+    length: number;
+}
 
-    constructor(value: Type) {
-        this.contents = value;
+class DataBox<Type extends Sized> {
+    content: Type;
+
+    constructor(input: Type) {
+        this.content = input;
     }
 
-    public print() {
-        console.log(this.contents);
+    print() {
+        console.log(this.content);
     }
 }
 
-const b1 = new Data('hello!');
-b1.print();
+const d1 = new DataBox('hello');
+d1.print();
 
-const b2 = new Data(1);
-b2.print();
-
-const b3 = new Data(true);
-b3.print();
+const d2 = new DataBox([1, 2, 3]);
+d2.print();

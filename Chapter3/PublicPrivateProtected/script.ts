@@ -1,6 +1,6 @@
 class Point2D {
-    xPos: number;
-    yPos: number;
+    public xPos: number;
+    public yPos: number;
 
     constructor(xPosInput: number, yPosInput: number) {
         this.xPos = xPosInput;
@@ -9,11 +9,13 @@ class Point2D {
 }
 
 class Point3D extends Point2D {
-    zPos: number;
+    protected zPos: number;
 
     constructor(xPosInput: number, yPosInput: number, zPosInput: number) {
         super(xPosInput, yPosInput);
         this.zPos = zPosInput;
+
+        this.xPos = 2;
     }
 }
 
