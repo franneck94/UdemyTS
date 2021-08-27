@@ -42,3 +42,5 @@ Dieser Kurs besteht aus folgenden Themengebieten:
 ☑️ Funktionen, Klassen, Vererbung etc.  
 
 Werde noch heute ein Profi, in der Technologie von Morgen! Wir sehen uns im Kurs!
+
+\* Alle Angaben ohne Gewähr
