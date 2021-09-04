@@ -6,19 +6,23 @@ interface User {
 
 type UserOptional = Partial<User>;
 
-function updateUserData(user: User, newData: UserOptional) {
+function updateUserData(user: User, data: UserOptional) {
     return {
         ...user,
-        ...newData,
+        ...data,
     };
 }
 
-const u1: User = { name: 'Jan', email: 'jan@email.com' };
+let u1: User = { name: 'Jan' };
 
-updateUserData(u1, { email: 'jan2@email.com' });
+console.log(u1);
+
+u1 = updateUserData(u1, { email: 'jan@email.com' });
+
+console.log(u1);
 
 type UserRequired = Required<User>;
 
-type UserBaseInfo = Pick<UserRequired, 'email' | 'name'>;
+type UserBaseInfo = Pick<User, 'email' | 'name'>;
 
-type UserFullInfo = Omit<UserRequired, 'id'>;
+type UserInfo = Omit<User, 'name' | 'id'>;

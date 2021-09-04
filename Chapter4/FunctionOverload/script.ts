@@ -8,15 +8,35 @@ class Point2D {
     }
 }
 
-function printCoordinates(point: Point2D): void;
-function printCoordinates(xPos: number, yPos: number): void;
+// function printCoordinatesFromPoint2D(point: Point2D) {
+//     console.log(point.xPos, point.yPos);
+// }
 
-function printCoordinates(arg1: unknown, arg2?: unknown) {
+// function printCoordinatesFromNumber(x: number, y: number) {
+//     console.log(x, y);
+// }
+
+function printCoordinates(point: Point2D): void;
+function printCoordinates(x: number, y: number): void;
+function printCoordinates(x: number, y: number, z: number): void;
+
+function printCoordinates(arg1: unknown, arg2?: unknown, arg3?: unknown) {
     if (typeof arg1 === 'object') {
-        console.log(`x: ${(arg1 as Point2D).xPos}`);
-        console.log(`x: ${(arg1 as Point2D).yPos}`);
+        console.log((arg1 as Point2D).xPos);
+        console.log((arg1 as Point2D).yPos);
+    } else if (typeof arg3 === 'number') {
+        console.log(arg1);
+        console.log(arg2);
+        console.log(arg3);
     } else {
-        console.log(`x: ${arg1}`);
-        console.log(`x: ${arg2}`);
+        console.log(arg1);
+        console.log(arg2);
     }
 }
+
+const p = new Point2D(2, 2);
+printCoordinates(p);
+
+printCoordinates(1, 1);
+
+printCoordinates(1, 1, 1);

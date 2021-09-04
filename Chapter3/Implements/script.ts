@@ -3,7 +3,7 @@ interface AppointmentInterface {
     endTime: Date;
     description: string;
 
-    printEntry(): void;
+    printAppointment(): void;
 }
 
 class Appointment implements AppointmentInterface {
@@ -33,7 +33,7 @@ class Appointment implements AppointmentInterface {
         return this._description;
     }
 
-    printEntry() {
+    printAppointment() {
         console.log(this.startTime, this.endTime, this.description);
     }
 }

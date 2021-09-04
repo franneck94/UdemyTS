@@ -4,7 +4,7 @@ interface UserEvent {
 }
 
 interface ServerEvent {
-    errorCode: number;
+    eventCode: number;
     timestamp: number;
 }
 
@@ -13,19 +13,18 @@ interface Events {
     ServerEvent: ServerEvent;
 }
 
-function mapEvent<EventType extends keyof Events>(
+function logEvent<EventType extends keyof Events>(
     key: EventType,
-    data: Events[EventType],
+    event: Events[EventType],
 ) {
-    console.log(key, data);
+    console.log(event);
 }
 
-const e1: UserEvent = { name: 'user1', timestamp: 0 };
+const e1: UserEvent = { name: 'jan', timestamp: 0 };
+const e2: ServerEvent = { eventCode: 404, timestamp: 1 };
 
-mapEvent('UserEvent', e1);
+logEvent('UserEvent', e1);
 
-const e2: ServerEvent = { errorCode: 404, timestamp: 1 };
+logEvent('ServerEvent', e2);
 
-mapEvent('ServerEvent', e2);
-
-mapEvent('UserEvent', { name: 'user2', timestamp: 2 });
+logEvent('ServerEvent', { eventCode: 400, timestamp: 2 });

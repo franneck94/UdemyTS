@@ -1,3 +1,11 @@
+interface AppointmentInterface {
+    startTime: Date;
+    endTime: Date;
+    description: string;
+
+    printAppointment(): void;
+}
+
 abstract class AppointmentABC {
     protected startTime: Date;
     protected endTime: Date;
@@ -13,7 +21,7 @@ abstract class AppointmentABC {
         this.description = descriptionInput;
     }
 
-    abstract printEntry(): void;
+    abstract printAppointment(): void;
 }
 
 class Appointment extends AppointmentABC {
@@ -25,7 +33,7 @@ class Appointment extends AppointmentABC {
         super(startTimeInput, endTimeInput, descriptionInput);
     }
 
-    printEntry() {
+    printAppointment() {
         console.log(this.startTime, this.endTime, this.description);
     }
 }
