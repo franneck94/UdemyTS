@@ -1,0 +1,13 @@
+{
+  "name": "typescriptintro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
