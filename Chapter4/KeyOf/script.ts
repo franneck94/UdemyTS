@@ -1,12 +1,13 @@
 interface User {
     name: string;
     id: number;
+    age: number;
 }
 
-function logProperty(user: User, key: keyof User) {
+function logUserProperty(user: User, key: keyof User) {
     console.log(user[key]);
 }
 
-const u1: User = { name: 'Jan', id: 100 };
+const u1: User = { name: 'Jan', id: 100, age: 27 };
 
-logProperty(u1, 'id');
+logUserProperty(u1, 'age');

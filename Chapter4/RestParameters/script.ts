@@ -1,14 +1,23 @@
-function multiply(n: number, ...m: number[]) {
-    return m.map((x) => n * x);
+const a1 = [1, 2, 3];
+
+function arraySum(arr: number[]) {
+    let result: number = 0;
+
+    arr.forEach((element) => (result += element));
+
+    return result;
 }
 
-const a = multiply(10, 1, 2, 3, 4);
+const s1 = arraySum(a1);
+console.log(s1);
 
-console.log(a);
+function argumentSum(...numbers: number[]) {
+    let result: number = 0;
 
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
+    numbers.forEach((element) => (result += element));
 
-arr1.push(...arr2);
+    return result;
+}
 
-console.log(arr1);
+const s2 = argumentSum(1, 2, 3, 4);
+console.log(s2);

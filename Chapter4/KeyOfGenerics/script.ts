@@ -1,30 +1,23 @@
-interface UserEvent {
+interface User {
     name: string;
-    timestamp: number;
+    id?: number;
+    age?: number;
 }
 
-interface ServerEvent {
-    eventCode: number;
-    timestamp: number;
+interface Admin {
+    name: string;
 }
 
-interface Events {
-    UserEvent: UserEvent;
-    ServerEvent: ServerEvent;
+function logUserProperty<T extends User | Admin>(obj: T, key: keyof T) {
+    console.log(obj[key]);
 }
 
-function logEvent<EventType extends keyof Events>(
-    key: EventType,
-    event: Events[EventType],
-) {
-    console.log(event);
-}
+const u1: User = { name: 'Jan', id: 100, age: 27 };
 
-const e1: UserEvent = { name: 'jan', timestamp: 0 };
-const e2: ServerEvent = { eventCode: 404, timestamp: 1 };
+logUserProperty(u1, 'age');
 
-logEvent('UserEvent', e1);
+const a1: Admin = { name: 'Peter' };
 
-logEvent('ServerEvent', e2);
+logUserProperty(a1, 'name');
 
-logEvent('ServerEvent', { eventCode: 400, timestamp: 2 });
+logUserProperty({ name: 'Daniel' }, 'name');

@@ -1,38 +1,35 @@
-type Fish = { swim: () => void };
-type Bird = { fly: () => void };
+class User {
+    name: string;
+    id: number;
 
-function move(arg: Fish | Bird) {
-    if ('swim' in arg) {
-        arg.swim();
-    } else if ('fly' in arg) {
-        arg.fly();
+    constructor(name_: string, id_: number) {
+        this.name = name_;
+        this.id = id_;
     }
 }
 
-class Point2D {
-    public xPos: number;
-    public yPos: number;
+class Admin {
+    name: string;
 
-    constructor(xPosInput: number, yPosInput: number) {
-        this.xPos = xPosInput;
-        this.yPos = yPosInput;
+    constructor(name_: string) {
+        this.name = name_;
     }
 }
 
-function printCoordinates(point: Point2D): void;
-function printCoordinates(x: number, y: number): void;
-
-function printCoordinates(arg1: unknown, arg2?: unknown) {
-    if (arg1 instanceof Point2D) {
-        console.log(arg1.xPos);
-        console.log(arg1.yPos);
+function printInfo(arg: User | Admin) {
+    if ('id' in arg) {
+        console.log(arg['name']);
+        console.log(arg['id']);
     } else {
-        console.log(arg1);
-        console.log(arg2);
+        console.log(arg['name']);
     }
 }
 
-const p = new Point2D(2, 2);
-
-printCoordinates(p);
-printCoordinates(1, 1);
+function printInfo2(arg: User | Admin) {
+    if (arg instanceof User) {
+        console.log(arg['name']);
+        console.log(arg['id']);
+    } else {
+        console.log(arg['name']);
+    }
+}
