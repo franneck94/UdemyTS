@@ -4,6 +4,8 @@
 
 - npm
 - npm install -g typescript
+- npm install -g lite-server
+- npm install -g ts-node
 
 ## Video Setup
 
