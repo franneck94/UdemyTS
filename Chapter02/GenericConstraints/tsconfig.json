@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "outDir": ".",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "rootDir": ".",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "removeComments": true
+  },
+  "include": ["**/*.ts",],
+  "exclude": ["node_modules", ".vscode", "out", "dist"]
+}
